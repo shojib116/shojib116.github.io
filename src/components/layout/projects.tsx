@@ -60,7 +60,7 @@ function ProjectComponent() {
       : projects.filter((p) => p.category === selected);
   return (
     <>
-      <div className="mb-4 flex gap-2 ">
+      <div className="mb-4 flex flex-wrap gap-2 ">
         <FilterButton
           category={"All"}
           isSelected={selected === null}
