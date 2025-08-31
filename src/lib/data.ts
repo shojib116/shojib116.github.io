@@ -226,3 +226,27 @@ export const competitiveProgramming = [
     description: "Technical skill assessments",
   },
 ];
+
+export const contactMethods = [
+  {
+    icon: Mail,
+    label: "Email",
+    value: "shojib116@gmail.com",
+    href: "mailto:shojib116@gmail.com",
+    description: "Get in touch for opportunities",
+  },
+  {
+    icon: Linkedin,
+    label: "LinkedIn",
+    value: "linkedin.com/in/shojib116",
+    href: "https://linkedin.com/in/shojib116",
+    description: "Professional networking",
+  },
+  {
+    icon: Github,
+    label: "GitHub",
+    value: "github.com/shojib116",
+    href: "https://github.com/shojib116",
+    description: "Code repositories & projects",
+  },
+];
