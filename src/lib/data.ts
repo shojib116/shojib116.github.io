@@ -1,5 +1,5 @@
-import { Github, Linkedin, Mail } from "lucide-react";
-import { type Project, Category } from "./types";
+import { Github, GraduationCap, Linkedin, Mail, Users } from "lucide-react";
+import { type Project, Category, type Experience } from "./types";
 import {
   CIcon,
   CPPIcon,
@@ -158,5 +158,69 @@ export const skillCategories = [
       { name: "Linux", icon: LinuxIcon },
       { name: "Windows", icon: WindowsIcon },
     ],
+  },
+];
+
+export const experiences: Experience[] = [
+  {
+    title: "Quality Assurance Auditor, Engineering Department",
+    organization: "US-Bangla Airlines Ltd.",
+    period: "2023 - Present",
+    description: "Auditing and compliance monitoring",
+    highlights: [
+      "Auditing different section of Engineering Departments",
+      "Compliance and status monitoring of different aspects",
+      "Cooperating in obtaining and issuing authorizationa and approvals",
+    ],
+  },
+];
+
+export const leadershipExperiences: Experience[] = [
+  {
+    title: "CEO, Control Engineering Club (LOOP)",
+    organization: "KUET",
+    period: "2020 - 2023",
+    description: "Instructed 60+ students in C programming fundamentals",
+    highlights: [
+      "Guided non-CS students into programming basics",
+      "Developed curriculum for practical programming skills",
+      "Led technical workshops and coding sessions",
+    ],
+  },
+];
+
+export const education = [
+  {
+    degree: "B.Sc. in Mecanical Engineering",
+    institution: "Khulna University of Engineering & Technology (KUET)",
+    period: "2018 - 2023",
+    thesis:
+      "Numerical Investigation on The Effect of Piston Bowl Geometry on CI Engine Performance (ANSYS Forte)",
+    highlights: [
+      "Strong analytical and problem-solving foundation",
+      "Experience with simulation and modeling tools",
+      "Systems thinking approach to complex problems",
+    ],
+  },
+];
+
+export const competitiveProgramming = [
+  {
+    platform: "LeetCode",
+    username: "shojib116",
+    url: "https://leetcode.com/u/shojib116",
+    description: "Problem-solving and algorithm optimization",
+  },
+  {
+    platform: "Codeforces",
+    username: "shojib116",
+    url: "https://codeforces.com/profile/shojib116",
+    description: "Competitive programming contests",
+  },
+  {
+    platform: "HackerRank",
+    username: "shojib116",
+    url: "https://hackerrank.com/shojib116",
+    description: "Technical skill assessments",
   },
 ];

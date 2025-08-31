@@ -18,3 +18,11 @@ export type Project = {
   };
   category: Category;
 };
+
+export type Experience = {
+  title: string;
+  organization: string;
+  period: string;
+  description: string;
+  highlights: string[];
+};
