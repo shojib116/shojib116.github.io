@@ -22,6 +22,7 @@ import GitIcon from "./git";
 import NeovimIcon from "./neovim";
 import WindowsIcon from "./windows";
 import LinuxIcon from "./linux";
+import SupabaseIcon from "./supabase";
 
 export {
   JavascriptIcon,
@@ -47,6 +48,7 @@ export {
   GitIcon,
   NeovimIcon,
   WindowsIcon,
-  LinuxIcon
+  LinuxIcon,
+  SupabaseIcon
 };
 

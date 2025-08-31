@@ -18,6 +18,7 @@ import {
   PythonIcon,
   ReactIcon,
   RestAPIIcon,
+  SupabaseIcon,
   TailwindIcon,
   TypescriptIcon,
   WindowsIcon,
@@ -146,8 +147,9 @@ export const skillCategories = [
     title: "Databases",
     skills: [
       { name: "MySQL", icon: MysqlIcon },
-      { name: "MongoDB", icon: MongodbIcon },
       { name: "PostgreSQL", icon: PostgresqlIcon },
+      { name: "MongoDB", icon: MongodbIcon },
+      { name: "Supabase", icon: SupabaseIcon },
     ],
   },
   {
