@@ -1,5 +1,27 @@
 import { Github, Linkedin, Mail } from "lucide-react";
 import { type Project, Category } from "./types";
+import {
+  CIcon,
+  CPPIcon,
+  ExpressIcon,
+  GitIcon,
+  GoIcon,
+  JavascriptIcon,
+  LinuxIcon,
+  MongodbIcon,
+  MotionIcon,
+  MysqlIcon,
+  NeovimIcon,
+  NextIcon,
+  NodeIcon,
+  PostgresqlIcon,
+  PythonIcon,
+  ReactIcon,
+  RestAPIIcon,
+  TailwindIcon,
+  TypescriptIcon,
+  WindowsIcon,
+} from "@/components/icons";
 
 export const socials = [
   {
@@ -87,5 +109,54 @@ export const projects: Project[] = [
       github: "#",
     },
     category: Category.game,
+  },
+];
+
+export const skillCategories = [
+  {
+    title: "Languages",
+    skills: [
+      { name: "JavaScript", icon: JavascriptIcon },
+      { name: "TypeScript", icon: TypescriptIcon },
+      { name: "Go", icon: GoIcon },
+      { name: "Python", icon: PythonIcon },
+      { name: "C", icon: CIcon },
+      { name: "C++", icon: CPPIcon },
+    ],
+  },
+  {
+    title: "Frontend",
+    skills: [
+      { name: "React", icon: ReactIcon },
+      { name: "Next.js", icon: NextIcon },
+      { name: "TailwindCSS", icon: TailwindIcon },
+      { name: "Framer Motion", icon: MotionIcon },
+    ],
+  },
+  {
+    title: "Backend",
+    skills: [
+      { name: "Node.js", icon: NodeIcon },
+      { name: "Express.js", icon: ExpressIcon },
+      { name: "Go", icon: GoIcon },
+      { name: "REST APIs", icon: RestAPIIcon },
+    ],
+  },
+  {
+    title: "Databases",
+    skills: [
+      { name: "MySQL", icon: MysqlIcon },
+      { name: "MongoDB", icon: MongodbIcon },
+      { name: "PostgreSQL", icon: PostgresqlIcon },
+    ],
+  },
+  {
+    title: "Tools & OS",
+    skills: [
+      { name: "Git", icon: GitIcon },
+      { name: "Neovim", icon: NeovimIcon },
+      { name: "Linux", icon: LinuxIcon },
+      { name: "Windows", icon: WindowsIcon },
+    ],
   },
 ];
