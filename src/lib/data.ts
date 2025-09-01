@@ -48,10 +48,10 @@ export const projects: Project[] = [
     description:
       "Fullstack web app with admin dashboard to manage research publications.",
     impact: "Made research visibility dynamic and scalable.",
-    stack: ["Next.js", "Node.js", "MySQL"],
+    stack: ["Next.js", "Node.js", "Supabase", "Tailwind"],
     links: {
-      github: "#",
-      live: "#",
+      github: "https://github.com/srdhrubo/srdhrubo",
+      live: "https://srdhrubo.vercel.app",
     },
     category: Category.fullstack,
   },
@@ -60,9 +60,9 @@ export const projects: Project[] = [
     description:
       "Real-time assessment tool with question bank management system.",
     impact: "Faster, interactive evaluation for instructors.",
-    stack: ["Node.js", "Express.js", "MongoDB"],
+    stack: ["Node.js", "Next.js", "MongoDB"],
     links: {
-      github: "#",
+      github: "https://github.com/shojib116/caq",
     },
     category: Category.fullstack,
   },
@@ -70,11 +70,10 @@ export const projects: Project[] = [
     title: "Password Generator",
     description:
       "Secure password generator with customizable rules and strength indicators.",
-    impact: "Encouraged better security habits.",
-    stack: ["React", "TailwindCSS"],
+    stack: ["HTML", "CSS", "Javascript"],
     links: {
-      github: "#",
-      live: "#",
+      github: "https://github.com/shojib116/password-generator",
+      live: "https://password-generator-shojib116.netlify.app/",
     },
     category: Category.frontend,
   },
@@ -82,21 +81,19 @@ export const projects: Project[] = [
     title: "Color Scheme Generator",
     description:
       "Dynamic color palette generator using external APIs for design inspiration.",
-    impact: "Helped designers/devs get quick color inspiration.",
-    stack: ["React", "APIs"],
+    stack: ["HTML", "CSS", "Javascript", "API Integration"],
     links: {
-      github: "#",
-      live: "#",
+      github: "https://github.com/shojib116/color-scheme-generator",
+      live: "https://color-scheme-generator-shojib116.netlify.app/",
     },
     category: Category.frontend,
   },
   {
     title: "Neighborhood Segmentation & Clustering",
     description: "Python data analysis project for urban planning insights.",
-    impact: "Extracted insights for urban planning and markets.",
-    stack: ["Python", "Scikit-learn", "Pandas"],
+    stack: ["Python", "Numpy", "Pandas", "Matplotlib"],
     links: {
-      github: "#",
+      github: "https://github.com/shojib116/data-science-capstone",
     },
     category: Category.dataScience,
   },
@@ -104,12 +101,49 @@ export const projects: Project[] = [
     title: "Tic Tac Toe Game",
     description:
       "Simple Python game with clean logic and interactive gameplay.",
-    impact: "Logic + clean code practice.",
     stack: ["Python"],
     links: {
-      github: "#",
+      github: "https://github.com/shojib116/tictactoe",
     },
     category: Category.game,
+  },
+  {
+    title: "Web Tic Tac Toe Game",
+    description: "Simple game with clean logic and interactive gameplay.",
+    stack: ["HTML", "CSS", "Javascript"],
+    links: {
+      github: "https://github.com/shojib116/Web-TicTacToe",
+      live: "https://tic-tac-toe-shojib116.netlify.app/",
+    },
+    category: Category.game,
+  },
+  {
+    title: "Oldagram",
+    description: "Instagram UI Clone",
+    stack: ["HTML", "CSS", "Javascript"],
+    links: {
+      github: "https://github.com/shojib116/oldagram",
+      live: "https://shojib116.github.io/oldagram",
+    },
+    category: Category.frontend,
+  },
+  {
+    title: "Cookie Consent",
+    description: "Fun and annoying cookie consent app",
+    stack: ["HTML", "CSS", "Javascript"],
+    links: {
+      live: "https://cookie-consent-shojib116.netlify.app/",
+    },
+    category: Category.frontend,
+  },
+  {
+    title: "Dayf Booking",
+    description: "Frontend prototype for a booking company",
+    stack: ["HTML", "CSS", "Javascript"],
+    links: {
+      live: "https://dayf-booking.vercel.app/",
+    },
+    category: Category.frontend,
   },
 ];
 

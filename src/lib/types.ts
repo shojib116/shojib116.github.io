@@ -10,7 +10,7 @@ export enum Category {
 export type Project = {
   title: string;
   description: string;
-  impact: string;
+  impact?: string;
   stack: string[];
   links: {
     github?: string;

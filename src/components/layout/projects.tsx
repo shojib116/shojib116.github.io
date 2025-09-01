@@ -89,11 +89,15 @@ function ProjectComponent() {
                 <p className="text-muted-foreground text-sm mb-3">
                   {project.description}
                 </p>
-                <div className="flex items-center space-x-2 text-sm text-green-600 dark:text-green-400">
-                  <Zap className="h-4 w-4" />
-                  <span className="font-medium">Impact:</span>
-                  <span>{project.impact}</span>
-                </div>
+                {project.impact && (
+                  <div className="text-sm text-green-600 dark:text-green-400">
+                    <span className="inline-flex items-baseline gap-2">
+                      <Zap className="h-4 w-4 inline-flex" />
+                      <span className="font-medium">Impact:</span>
+                    </span>{" "}
+                    {project.impact}
+                  </div>
+                )}
               </div>
 
               <div className="flex flex-wrap gap-2">
