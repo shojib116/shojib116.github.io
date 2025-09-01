@@ -23,6 +23,7 @@ export const metadata: Metadata = {
     "competitive programming",
   ],
   authors: [{ name: "Md. Nazmul Hasan Shajib" }],
+  viewport: "width=device-width, initial-scale=1",
 };
 
 export default function RootLayout({
