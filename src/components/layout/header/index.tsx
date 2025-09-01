@@ -43,10 +43,8 @@ export default function Navigation() {
       <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-          isScrolled
-            ? "bg-background/80 backdrop-blur-lg border-b border-border/50"
-            : "bg-transparent"
+        className={`bg-background/70 backdrop-blur-lg fixed top-0 w-full z-50 transition-all duration-300 ${
+          isScrolled ? "border-b border-border/50" : ""
         }`}
       >
         <MaxWidthWrapper>

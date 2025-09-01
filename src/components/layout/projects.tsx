@@ -11,7 +11,7 @@ import { useState } from "react";
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="py-20">
       <MaxWidthWrapper>
         <motion.div
           initial={{ opacity: 0, y: 30 }}

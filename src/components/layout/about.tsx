@@ -27,7 +27,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-20">
       <MaxWidthWrapper>
         <motion.div
           initial={{ opacity: 0, y: 30 }}

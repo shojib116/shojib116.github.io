@@ -15,7 +15,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8"
+      className="min-h-screen flex items-center justify-center"
     >
       <MaxWidthWrapper>
         <div className="max-w-4xl mx-auto text-center">
@@ -66,17 +66,16 @@ export default function Hero() {
                 onClick={() => scrollToSection("#projects")}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-              ><Button>
-                  View Projects</Button>
+              >
+                <Button>View Projects</Button>
               </motion.div>
 
               <motion.div
                 onClick={() => scrollToSection("#contact")}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-              ><Button variant={"secondary"}>
-                  Get in Touch
-                </Button>
+              >
+                <Button variant={"secondary"}>Get in Touch</Button>
               </motion.div>
             </motion.div>
 
