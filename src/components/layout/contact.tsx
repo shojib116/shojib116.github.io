@@ -4,7 +4,6 @@ import { motion } from "motion/react";
 import { ExternalLink } from "lucide-react";
 import { contactMethods } from "@/lib/data";
 import MaxWidthWrapper from "./max-width-wrapper";
-import { MovingBorderDiv } from "../ui/moving-border";
 
 export default function Contact() {
   return (

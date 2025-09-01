@@ -4,7 +4,11 @@ import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { ThemeToggle } from "./theme-toggle";
 import LogoIcon from "@/components/icons/logo";
-import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover";
+import {
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+} from "@/components/ui/popover";
 import { Menu, X } from "lucide-react";
 import MaxWidthWrapper from "../max-width-wrapper";
 
@@ -18,7 +22,7 @@ const navItems = [
 ];
 
 export default function Navigation() {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -39,10 +43,11 @@ export default function Navigation() {
       <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled
-          ? "bg-background/80 backdrop-blur-lg border-b border-border/50"
-          : "bg-transparent"
-          }`}
+        className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+          isScrolled
+            ? "bg-background/80 backdrop-blur-lg border-b border-border/50"
+            : "bg-transparent"
+        }`}
       >
         <MaxWidthWrapper>
           <div className="grid grid-cols-2 lg:grid-cols-[9.375rem_1fr_9.375rem] items-center py-4">
@@ -63,13 +68,14 @@ export default function Navigation() {
               <ThemeToggle className="hidden lg:block float-right" />
               <div className="lg:hidden float-right">
                 <Popover open={open} onOpenChange={setOpen}>
-                  <motion.div
-                    whileTap={{ scale: 0.95 }}
-                  >
+                  <motion.div whileTap={{ scale: 0.95 }}>
                     <PopoverTrigger>
-                      <motion.div
-                        animate={{ rotate: open ? 90 : 0 }}>
-                        {open ? <X className="h-6 w-6 text-foreground" /> : <Menu className="h-6 w-6 text-foreground" />}
+                      <motion.div animate={{ rotate: open ? 90 : 0 }}>
+                        {open ? (
+                          <X className="h-6 w-6 text-foreground" />
+                        ) : (
+                          <Menu className="h-6 w-6 text-foreground" />
+                        )}
                       </motion.div>
                     </PopoverTrigger>
                   </motion.div>
@@ -89,16 +95,23 @@ export default function Navigation() {
   );
 }
 
-
-function NavItems({ scrollToSection }: { scrollToSection: (s: string) => void }) {
-  return <>{navItems.map((item) => (
-    <motion.button
-      key={item.href}
-      onClick={() => scrollToSection(item.href)}
-      className="text-muted-foreground hover:text-foreground font-bold transition-colors"
-      whileTap={{ scale: 0.95 }}
-    >
-      {item.label}
-    </motion.button>
-  ))}
-  </>
+function NavItems({
+  scrollToSection,
+}: {
+  scrollToSection: (s: string) => void;
+}) {
+  return (
+    <>
+      {navItems.map((item) => (
+        <motion.button
+          key={item.href}
+          onClick={() => scrollToSection(item.href)}
+          className="text-muted-foreground hover:text-foreground font-bold transition-colors"
+          whileTap={{ scale: 0.95 }}
+        >
+          {item.label}
+        </motion.button>
+      ))}
+    </>
+  );
+}
