@@ -37,9 +37,9 @@ export default function Skills() {
                 {category.title}
               </h3>
               <div className="space-y-3">
-                {category.skills.map(({ name, icon: Icon }, skillIndex) => (
+                {category.skills.map(({ title, icon: Icon }, skillIndex) => (
                   <motion.div
-                    key={name}
+                    key={title}
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{
@@ -50,7 +50,7 @@ export default function Skills() {
                     className="flex items-center space-x-3 p-2 rounded-md hover:bg-accent/50 transition-colors"
                   >
                     <Icon className="h-6 w-6 dark:bg-primary dark:rounded-xs dark:p-px" />
-                    <span className="font-medium">{name}</span>
+                    <span className="font-medium">{title}</span>
                   </motion.div>
                 ))}
               </div>

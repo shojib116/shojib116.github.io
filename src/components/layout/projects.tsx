@@ -101,14 +101,19 @@ function ProjectComponent() {
               </div>
 
               <div className="flex flex-wrap gap-2">
-                {project.stack.map((tech) => (
-                  <span
-                    key={tech}
-                    className="px-2 py-1 bg-primary/10 text-primary rounded-md text-xs font-medium"
-                  >
-                    {tech}
-                  </span>
-                ))}
+                {project.stack.map((tech) => {
+                  const isIcon = typeof tech !== "string" && "icon" in tech;
+                  return isIcon ? (
+                    <tech.icon key={tech.title} className="w-6 h-6" />
+                  ) : (
+                    <span
+                      key={tech}
+                      className="px-2 py-1 bg-primary/10 text-primary rounded-md text-xs font-medium"
+                    >
+                      {tech}
+                    </span>
+                  );
+                })}
               </div>
 
               <div className="flex items-center justify-between pt-4 border-t border-border">
@@ -160,9 +165,9 @@ function FilterButton({
       variant={"secondary"}
       className={cn(
         isSelected &&
-          buttonVariants({
-            variant: "default",
-          }),
+        buttonVariants({
+          variant: "default",
+        }),
       )}
       onClick={selectFunc}
     >

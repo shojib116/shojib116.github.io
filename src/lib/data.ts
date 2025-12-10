@@ -1,5 +1,5 @@
-import { Github, GraduationCap, Linkedin, Mail, Users } from "lucide-react";
-import { type Project, Category, type Experience } from "./types";
+import { Github, Linkedin, Mail } from "lucide-react";
+import { type Project, Category, Experience, Icon } from "./types";
 import {
   CIcon,
   CPPIcon,
@@ -23,6 +23,9 @@ import {
   TypescriptIcon,
   WindowsIcon,
 } from "@/components/icons";
+import HTMLIcon from "@/components/icons/html";
+import CSSIcon from "@/components/icons/css";
+import SvelteIcon from "@/components/icons/svelte";
 
 export const socials = [
   {
@@ -42,13 +45,87 @@ export const socials = [
   },
 ];
 
+export const iconMap: Record<string, Icon> = {
+  JavaScript: { title: "JavaScript", icon: JavascriptIcon },
+  TypeScript: { title: "TypeScript", icon: TypescriptIcon },
+  Go: { title: "Go", icon: GoIcon },
+  Python: { title: "Python", icon: PythonIcon },
+  C: { title: "C", icon: CIcon },
+  "C++": { title: "C++", icon: CPPIcon },
+
+  HTML: { title: "HTML", icon: HTMLIcon },
+  CSS: { title: "CSS", icon: CSSIcon },
+  Svelte: { title: "Svelte", icon: SvelteIcon },
+  React: { title: "React", icon: ReactIcon },
+  NextJS: { title: "Next.js", icon: NextIcon },
+  TailwindCSS: { title: "TailwindCSS", icon: TailwindIcon },
+  FramerMotion: { title: "Framer Motion", icon: MotionIcon },
+
+  NodeJS: { title: "Node.js", icon: NodeIcon },
+  ExpressJS: { title: "Express.js", icon: ExpressIcon },
+  REST_APIs: { title: "REST APIs", icon: RestAPIIcon },
+
+  MySQL: { title: "MySQL", icon: MysqlIcon },
+  PostgreSQL: { title: "PostgreSQL", icon: PostgresqlIcon },
+  MongoDB: { title: "MongoDB", icon: MongodbIcon },
+  Supabase: { title: "Supabase", icon: SupabaseIcon },
+
+  Git: { title: "Git", icon: GitIcon },
+  Neovim: { title: "Neovim", icon: NeovimIcon },
+  Linux: { title: "Linux", icon: LinuxIcon },
+  Windows: { title: "Windows", icon: WindowsIcon },
+};
+
 export const projects: Project[] = [
+  {
+    title: "Gold Digger",
+    description:
+      "Full-stack Node.js app that generates gold prices on the server and streams live updates to the frontend using Server-Sent Events.",
+    stack: [iconMap.NodeJS, iconMap.HTML, iconMap.CSS, iconMap.JavaScript],
+    links: {
+      github: "https://github.com/shojib116/gold-digger",
+    },
+    category: Category.fullstack,
+  },
+  {
+    title: "pokedexcli",
+    description:
+      "go powered cli tool to see, explore and catch pokemons in different locations. built using the pokeapi",
+    stack: [iconMap.Go, "PokeAPI"],
+    links: {
+      github: "https://github.com/shojib116/pokedexcli",
+    },
+    category: Category.others,
+  },
+  {
+    title: "Pasteroids",
+    description: "Asteroids game built using pygame library",
+    stack: [iconMap.Python, "PyGame"],
+    links: {
+      github: "https://github.com/shojib116/pasteroids",
+    },
+    category: Category.game,
+  },
+  {
+    title: "Glaude",
+    description: "A simple coding AI Agent built on gemini using python",
+    stack: [iconMap.Python, "Gemini AI"],
+    links: {
+      github: "https://github.com/shojib116/glaude",
+    },
+    category: Category.ai,
+  },
   {
     title: "Personal Research Portfolio",
     description:
       "Fullstack web app with admin dashboard to manage research publications.",
     impact: "Made research visibility dynamic and scalable.",
-    stack: ["Next.js", "Node.js", "Supabase", "Tailwind"],
+    stack: [
+      iconMap.NextJS,
+      iconMap.NodeJS,
+      iconMap.Supabase,
+      iconMap.TailwindCSS,
+    ],
     links: {
       github: "https://github.com/srdhrubo/srdhrubo",
       live: "https://srdhrubo.vercel.app",
@@ -60,7 +137,7 @@ export const projects: Project[] = [
     description:
       "Real-time assessment tool with question bank management system.",
     impact: "Faster, interactive evaluation for instructors.",
-    stack: ["Node.js", "Next.js", "MongoDB"],
+    stack: [iconMap.NextJS, iconMap.NodeJS, iconMap.MongoDB],
     links: {
       github: "https://github.com/shojib116/caq",
     },
@@ -70,7 +147,7 @@ export const projects: Project[] = [
     title: "Password Generator",
     description:
       "Secure password generator with customizable rules and strength indicators.",
-    stack: ["HTML", "CSS", "Javascript"],
+    stack: [iconMap.HTML, iconMap.CSS, iconMap.JavaScript],
     links: {
       github: "https://github.com/shojib116/password-generator",
       live: "https://password-generator-shojib116.netlify.app/",
@@ -81,7 +158,7 @@ export const projects: Project[] = [
     title: "Color Scheme Generator",
     description:
       "Dynamic color palette generator using external APIs for design inspiration.",
-    stack: ["HTML", "CSS", "Javascript", "API Integration"],
+    stack: [iconMap.HTML, iconMap.CSS, iconMap.JavaScript, "API Integration"],
     links: {
       github: "https://github.com/shojib116/color-scheme-generator",
       live: "https://color-scheme-generator-shojib116.netlify.app/",
@@ -91,7 +168,7 @@ export const projects: Project[] = [
   {
     title: "Neighborhood Segmentation & Clustering",
     description: "Python data analysis project for urban planning insights.",
-    stack: ["Python", "Numpy", "Pandas", "Matplotlib"],
+    stack: [iconMap.Python, "Numpy", "Pandas", "Matplotlib"],
     links: {
       github: "https://github.com/shojib116/data-science-capstone",
     },
@@ -101,7 +178,7 @@ export const projects: Project[] = [
     title: "Tic Tac Toe Game",
     description:
       "Simple Python game with clean logic and interactive gameplay.",
-    stack: ["Python"],
+    stack: [iconMap.Python],
     links: {
       github: "https://github.com/shojib116/tictactoe",
     },
@@ -110,7 +187,7 @@ export const projects: Project[] = [
   {
     title: "Web Tic Tac Toe Game",
     description: "Simple game with clean logic and interactive gameplay.",
-    stack: ["HTML", "CSS", "Javascript"],
+    stack: [iconMap.HTML, iconMap.CSS, iconMap.JavaScript],
     links: {
       github: "https://github.com/shojib116/Web-TicTacToe",
       live: "https://tic-tac-toe-shojib116.netlify.app/",
@@ -120,7 +197,7 @@ export const projects: Project[] = [
   {
     title: "Oldagram",
     description: "Instagram UI Clone",
-    stack: ["HTML", "CSS", "Javascript"],
+    stack: [iconMap.HTML, iconMap.CSS, iconMap.JavaScript],
     links: {
       github: "https://github.com/shojib116/oldagram",
       live: "https://shojib116.github.io/oldagram",
@@ -130,7 +207,7 @@ export const projects: Project[] = [
   {
     title: "Cookie Consent",
     description: "Fun and annoying cookie consent app",
-    stack: ["HTML", "CSS", "Javascript"],
+    stack: [iconMap.HTML, iconMap.CSS, iconMap.JavaScript],
     links: {
       live: "https://cookie-consent-shojib116.netlify.app/",
     },
@@ -139,7 +216,7 @@ export const projects: Project[] = [
   {
     title: "Dayf Booking",
     description: "Frontend prototype for a booking company",
-    stack: ["HTML", "CSS", "Javascript"],
+    stack: [iconMap.HTML, iconMap.CSS, iconMap.JavaScript],
     links: {
       live: "https://dayf-booking.vercel.app/",
     },
@@ -151,49 +228,42 @@ export const skillCategories = [
   {
     title: "Languages",
     skills: [
-      { name: "JavaScript", icon: JavascriptIcon },
-      { name: "TypeScript", icon: TypescriptIcon },
-      { name: "Go", icon: GoIcon },
-      { name: "Python", icon: PythonIcon },
-      { name: "C", icon: CIcon },
-      { name: "C++", icon: CPPIcon },
+      iconMap.JavaScript,
+      iconMap.TypeScript,
+      iconMap.Go,
+      iconMap.Python,
+      iconMap.C,
+      iconMap["C++"],
     ],
   },
   {
     title: "Frontend",
     skills: [
-      { name: "React", icon: ReactIcon },
-      { name: "Next.js", icon: NextIcon },
-      { name: "TailwindCSS", icon: TailwindIcon },
-      { name: "Framer Motion", icon: MotionIcon },
+      iconMap.HTML,
+      iconMap.CSS,
+      iconMap.Svelte,
+      iconMap.React,
+      iconMap.NextJS,
+      iconMap.TailwindCSS,
+      iconMap.FramerMotion,
     ],
   },
   {
     title: "Backend",
-    skills: [
-      { name: "Node.js", icon: NodeIcon },
-      { name: "Express.js", icon: ExpressIcon },
-      { name: "Go", icon: GoIcon },
-      { name: "REST APIs", icon: RestAPIIcon },
-    ],
+    skills: [iconMap.NodeJS, iconMap.ExpressJS, iconMap.Go, iconMap.REST_APIs],
   },
   {
     title: "Databases",
     skills: [
-      { name: "MySQL", icon: MysqlIcon },
-      { name: "PostgreSQL", icon: PostgresqlIcon },
-      { name: "MongoDB", icon: MongodbIcon },
-      { name: "Supabase", icon: SupabaseIcon },
+      iconMap.MySQL,
+      iconMap.PostgreSQL,
+      iconMap.MongoDB,
+      iconMap.Supabase,
     ],
   },
   {
     title: "Tools & OS",
-    skills: [
-      { name: "Git", icon: GitIcon },
-      { name: "Neovim", icon: NeovimIcon },
-      { name: "Linux", icon: LinuxIcon },
-      { name: "Windows", icon: WindowsIcon },
-    ],
+    skills: [iconMap.Git, iconMap.Neovim, iconMap.Linux, iconMap.Windows],
   },
 ];
 
